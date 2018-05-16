@@ -3,3 +3,4 @@ def binary_search(list, item):
   high = len(list) - 1
 
   return None
+
