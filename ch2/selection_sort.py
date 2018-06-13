@@ -1,20 +1,24 @@
 def findSmallest(arr):
-  smallest = arr[0]
-  smallest_index = 0
+    smallest = arr[0]
+    smallest_index = 0
 
-  for i in range(1, len(arr)):
-    if arr[i] < smallest:
-      smallest = arr[i]
-      smallest_index = i
+    for i in range(1, len(arr)):
+        if arr[i] < smallest:
+            smallest = arr[i]
+            smallest_index = i
     return smallest_index
 
+
 def selectionSort(arr):
-  newArr = []
 
-  for i in range(len(arr)):
-    smallest = findSmallest(arr)
-    newArr.append(arr.pop(smallest))
+    newArr = []
 
-  return newArr
+    for i in range(len(arr)):
+        smallest = findSmallest(arr)
+        newArr.append(arr.pop(smallest))
 
-print selectionSort([2,5,3,8,6,10])
+    print "waiting for final result"
+    return newArr
+
+
+print selectionSort([2, 5, 3, 8, 6, 10])
